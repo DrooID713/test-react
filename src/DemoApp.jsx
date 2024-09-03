@@ -4,7 +4,6 @@ import FullCalendar from '@fullcalendar/react'
 import dayGridPlugin from '@fullcalendar/daygrid'
 import timeGridPlugin from '@fullcalendar/timegrid'
 import interactionPlugin from '@fullcalendar/interaction'
-import resourceTimelinePlugin from '@fullcalendar/resource-timeline'
 import { INITIAL_EVENTS, createEventId } from './event-utils'
 
 export default function DemoApp() {
@@ -47,7 +46,7 @@ export default function DemoApp() {
       <div className='demo-app-main'>
         <FullCalendar
           schedulerLicenseKey= '<YOUR-LICENSE-KEY-GOES-HERE>'
-          plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin, resourceTimelinePlugin]}
+          plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
           headerToolbar={{
             left: 'prev,next today',
             center: 'title',
