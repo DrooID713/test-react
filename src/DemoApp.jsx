@@ -45,6 +45,7 @@ export default function DemoApp() {
     <div className='demo-app'>
       <div className='demo-app-main'>
         <FullCalendar
+          schedulerLicenseKey= '<YOUR-LICENSE-KEY-GOES-HERE>'
           plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
           headerToolbar={{
             left: 'prev,next today',
