@@ -4,7 +4,6 @@ import FullCalendar from '@fullcalendar/react'
 import dayGridPlugin from '@fullcalendar/daygrid'
 import timeGridPlugin from '@fullcalendar/timegrid'
 import interactionPlugin from '@fullcalendar/interaction'
-import resourceTimeGridPlugin from '@fullcalendar/resource-timegrid'
 import { INITIAL_EVENTS, createEventId } from './event-utils'
 
 export default function DemoApp() {
@@ -47,17 +46,13 @@ export default function DemoApp() {
       <div className='demo-app-main'>
         <FullCalendar
           schedulerLicenseKey= '<YOUR-LICENSE-KEY-GOES-HERE>'
-          plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin, resourceTimeGridPlugin]}
+          plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
           headerToolbar={{
             left: 'prev,next today',
             center: 'title',
             right: 'dayGridMonth,timeGridWeek,timeGridDay'
           }}
           initialView='timeGridDay'
-          resources={[
-            { id: 'a', title: 'Room A' },
-            { id: 'b', title: 'Room B' }
-          ]}
           editable={true}
           selectable={true}
           selectMirror={true}
