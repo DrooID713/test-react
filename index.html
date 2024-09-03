@@ -10,6 +10,23 @@
 
 <body>
   <script>
+    window.YaAuthSuggest.init(
+    oauthQueryParams,
+    tokenPageOrigin,
+    {
+      view: "button",
+      parentId: "buttonContainerId",
+      buttonSize: 'xxl',
+      buttonView: 'main',
+      buttonTheme: 'light',
+      buttonBorderRadius: "28",
+      buttonIcon: 'ya',
+    }
+  )
+  .then(({handler}) => handler())
+  .then(data => console.log('Сообщение с токеном', data))
+  .catch(error => console.log('Обработка ошибки', error))
+
     YaAuthSuggest.init(
       {
         client_id: '2219a5c5f1a94a06b19110174b154bd2',
