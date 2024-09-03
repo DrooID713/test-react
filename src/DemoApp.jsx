@@ -18,7 +18,7 @@ export default function DemoApp() {
     let title = prompt('Please enter a new title for your event')
     let calendarApi = selectInfo.view.calendar
 
-    calendarApi.unselect() // clear date selection
+    calendarApi.unselect()
 
     if (title) {
       calendarApi.addEvent({
@@ -48,9 +48,8 @@ export default function DemoApp() {
           schedulerLicenseKey= '<YOUR-LICENSE-KEY-GOES-HERE>'
           plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
           headerToolbar={{
-            left: 'prev,next today',
-            center: 'title',
-            right: 'dayGridMonth,timeGridWeek,timeGridDay'
+            start: "prev next",
+            end: "today",
           }}
           initialView='timeGridDay'
           editable={true}
@@ -58,16 +57,11 @@ export default function DemoApp() {
           selectMirror={true}
           dayMaxEvents={true}
           weekends={weekendsVisible}
-          initialEvents={INITIAL_EVENTS} // alternatively, use the `events` setting to fetch from a feed
+          initialEvents={INITIAL_EVENTS}
           select={handleDateSelect}
-          eventContent={renderEventContent} // custom render function
+          eventContent={renderEventContent}
           eventClick={handleEventClick}
-          eventsSet={handleEvents} // called after events are initialized/added/changed/removed
-          /* you can update a remote database when these fire:
-          eventAdd={function(){}}
-          eventChange={function(){}}
-          eventRemove={function(){}}
-          */
+          eventsSet={handleEvents}
         />
       </div>
     </div>
