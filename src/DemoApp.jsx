@@ -42,14 +42,9 @@ export default function DemoApp() {
   }
 
   return (
-    <div className='demo-app'>
-      <Sidebar
-        weekendsVisible={weekendsVisible}
-        handleWeekendsToggle={handleWeekendsToggle}
-        currentEvents={currentEvents}
-      />
       <div className='demo-app-main'>
         <FullCalendar
+          schedulerLicenseKey='CC-Attribution-NonCommercial-NoDerivatives'
           plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
           headerToolbar={{
             left: 'prev,next today',
