@@ -49,6 +49,7 @@ export default function DemoApp() {
           plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
           headerToolbar={{
             start: "prev next",
+            center: "title",
             end: "today",
           }}
           initialView='timeGridDay'
