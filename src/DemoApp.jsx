@@ -50,7 +50,6 @@ export default function DemoApp() {
       />
       <div className='demo-app-main'>
         <FullCalendar
-          schedulerLicenseKey='CC-Attribution-NonCommercial-NoDerivatives'
           plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
           headerToolbar={{
             left: 'prev,next today',
