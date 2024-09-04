@@ -9,31 +9,15 @@
 </head>
 
 <body>
-  <script>
-    window.YaAuthSuggest.init(
-    oauthQueryParams,
-    tokenPageOrigin,
-    {
-      view: "button",
-      parentId: "buttonContainerId",
-      buttonSize: 'xxl',
-      buttonView: 'main',
-      buttonTheme: 'light',
-      buttonBorderRadius: "28",
-      buttonIcon: 'ya',
-    }
-  )
-  .then(({handler}) => handler())
-  .then(data => console.log('Сообщение с токеном', data))
-  .catch(error => console.log('Обработка ошибки', error))
 
+  <script>
     YaAuthSuggest.init(
       {
         client_id: '2219a5c5f1a94a06b19110174b154bd2',
         response_type: 'token',
-        redirect_uri: 'https://drooid713-test-react-8ffa.twc1.net'
+        redirect_uri: 'render_calendar.html'
       },
-      'https://drooid713-test-react-8ffa.twc1.net'
+      'https://examplesite.com'
     )
       .then(({
         handler
@@ -42,7 +26,6 @@
       .catch(error => console.log('Обработка ошибки', error));
   </script>
 
-  <script src="index.jsx"></script>
 </body>
 
 </html>
